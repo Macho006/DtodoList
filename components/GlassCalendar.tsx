@@ -95,19 +95,33 @@ export function GlassCalendar({ selected, onSelect, onClose }: GlassCalendarProp
                   .rdp-day:hover:not(.rdp-day_selected) { background-color: #f3f4f6; }
                 `}</style>
 
-                <DayPicker
-                  mode="single"
-                  selected={selected}
-                  onSelect={(date) => { if (date) { onSelect(date); onClose(); } }}
-                  month={currentDate}
-                  onMonthChange={setCurrentDate}
-                  locale={uz}
-                  showOutsideDays
-                  components={{
-                    IconLeft: () => <ChevronLeft className="w-6 h-6 text-zinc-600 dark:text-zinc-300" />,
-                    IconRight: () => <ChevronRight className="w-6 h-6 text-zinc-600 dark:text-zinc-300" />,
-                  }}
-                />
+<DayPicker
+  mode="single"
+  selected={selected}
+  onSelect={(date) => {
+    if (date) {
+      onSelect(date);
+      onClose();
+    }
+  }}
+  month={currentDate}
+  onMonthChange={setCurrentDate}
+  locale={uz}
+  showOutsideDays
+  components={{
+    Navigation: ({ onPreviousClick, onNextClick }) => (
+      <div className="flex items-center justify-between px-2 mb-2">
+        <button onClick={onPreviousClick}>
+          <ChevronLeft className="w-6 h-6 text-zinc-600 dark:text-zinc-300" />
+        </button>
+        <button onClick={onNextClick}>
+          <ChevronRight className="w-6 h-6 text-zinc-600 dark:text-zinc-300" />
+        </button>
+      </div>
+    ),
+  }}
+/>
+
               </motion.div>
             )}
 
