@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { ThemeToggle } from "@/components/ui/ThemeToggle";
 import { useTaskManager, DashboardStatus } from "@/hooks/useTaskManager";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, type Variants, easeOut } from "framer-motion";
 import { differenceInSeconds, format } from "date-fns";
 import { uz } from "date-fns/locale";
 import { 
@@ -20,15 +20,29 @@ interface DashboardUIProps {
 
 type TimeLeft = { days: number; hours: number; minutes: number; seconds: number } | null;
 
-const barVariants = {
-  hidden: { height: 0, opacity: 0 },
+const barVariants: Variants = {
+  hidden: {
+    height: 0,
+    opacity: 0,
+  },
   visible: (height: number) => ({
     height: `${height}%`,
     opacity: 1,
-    transition: { duration: 0.8, ease: "easeOut" }
+    transition: {
+      duration: 0.8,
+      ease: easeOut, // ✅ STRING EMAS
+    },
   }),
-  hover: { scale: 1.1, backgroundColor: "#8b5cf6", transition: { duration: 0.2 } }
+  hover: {
+    scale: 1.1,
+    backgroundColor: "#8b5cf6",
+    transition: {
+      duration: 0.2,
+      ease: easeOut,
+    },
+  },
 };
+
 
 export default function DashboardUI({ userEmail, logoutAction }: DashboardUIProps) {
   const userName = userEmail.split("@")[0];
@@ -204,7 +218,19 @@ export default function DashboardUI({ userEmail, logoutAction }: DashboardUIProp
                    </div>
                    <div className="text-3xl font-bold text-foreground mt-4">85% <span className="text-sm font-medium text-zinc-400">o'sish</span></div>
                </div>
-               <div className="flex items-end gap-3 h-24 pt-4">{[30, 50, 45, 80, 60, 95, 75].map((h, i) => (<motion.div key={i} custom={h} variants={barVariants} initial="hidden" whileInView="visible" whileHover="hover" viewport={{ once: true }} className="w-4 rounded-md bg-zinc-200 dark:bg-zinc-800 cursor-pointer origin-bottom" />))}</div>
+               <div className="flex items-end gap-3 h-24 pt-4">{[30, 50, 45, 80, 60, 95, 75].map((h, i) => (
+  <motion.div
+    key={i}
+    custom={h}
+    variants={barVariants}
+    initial="hidden"
+    whileInView="visible"
+    whileHover="hover"
+    viewport={{ once: true }}
+    className="w-4 rounded-md bg-zinc-200 dark:bg-zinc-800 cursor-pointer origin-bottom"
+  />
+))}
+</div>
             </div>
           </ScrollReveal>
 
