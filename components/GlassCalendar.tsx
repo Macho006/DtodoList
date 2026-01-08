@@ -108,20 +108,7 @@ export function GlassCalendar({ selected, onSelect, onClose }: GlassCalendarProp
   onMonthChange={setCurrentDate}
   locale={uz}
   showOutsideDays
-  components={{
-    Navigation: ({ onPreviousClick, onNextClick }) => (
-      <div className="flex items-center justify-between px-2 mb-2">
-        <button onClick={onPreviousClick}>
-          <ChevronLeft className="w-6 h-6 text-zinc-600 dark:text-zinc-300" />
-        </button>
-        <button onClick={onNextClick}>
-          <ChevronRight className="w-6 h-6 text-zinc-600 dark:text-zinc-300" />
-        </button>
-      </div>
-    ),
-  }}
 />
-
               </motion.div>
             )}
 
