@@ -185,7 +185,6 @@ export default function DashboardUI({ userEmail, logoutAction }: DashboardUIProp
                         </div>
                       </div>
                       <div className="flex items-center justify-between mt-8 relative z-10">
-                          <div className="flex -space-x-3">{[1,2,3].map(i => (<div key={i} className="w-10 h-10 rounded-full bg-zinc-100 dark:bg-zinc-800 border-2 border-white dark:border-black ring-1 ring-black/5" />))}</div>
                           <Button className="rounded-full w-14 h-14 p-0 bg-foreground text-background hover:scale-110 transition-transform shadow-xl"><ArrowRight className="w-6 h-6" /></Button>
                       </div>
                     </motion.div>
