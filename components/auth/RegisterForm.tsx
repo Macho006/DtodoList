@@ -69,7 +69,7 @@ export default function RegisterForm() {
         <div>
           <Input
             type="password"
-            placeholder="Parol o'ylab toping"
+            placeholder="Parol kiriting"
             required
             className="bg-zinc-950 border-zinc-800 text-white focus:ring-violet-500"
             onChange={(e) => setFormData({ ...formData, password: e.target.value })}
