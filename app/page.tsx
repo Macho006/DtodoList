@@ -10,20 +10,15 @@ export default function AuthPage() {
   const [isLogin, setIsLogin] = useState(true);
 
   return (
-    <main className="relative flex min-h-screen items-center justify-center overflow-hidden p-6 bg-black">
-      
-      {/* Orqa fon gradient effektlari */}
-      <div className="pointer-events-none fixed inset-0">
-        <div className="absolute -top-24 -left-24 w-[420px] h-[420px] bg-violet-600/20 rounded-full blur-[120px]" />
-        <div className="absolute -bottom-24 -right-24 w-[420px] h-[420px] bg-indigo-600/20 rounded-full blur-[120px]" />
-      </div>
+    <main className="relative flex min-h-screen items-center justify-center overflow-hidden p-6">
 
-      {/* Auth Card */}
+      {/* ❌ Gradient background OLIB TASHLANDI */}
+
       <motion.div
         initial={{ opacity: 0, scale: 0.9, y: 30 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
         transition={{ duration: 0.6, type: "spring", stiffness: 90 }}
-        className="relative z-10 w-full max-w-[440px]"
+        className="w-full max-w-[440px]"
       >
         <div className="ios-card p-10 shadow-2xl backdrop-blur-3xl bg-white/60 dark:bg-black/40 rounded-[32px] border border-white/10">
           
@@ -44,7 +39,6 @@ export default function AuthPage() {
             </p>
           </div>
 
-          {/* Login / Register */}
           <div className="relative min-h-[320px]">
             <AnimatePresence mode="wait">
               {isLogin ? (
@@ -71,7 +65,6 @@ export default function AuthPage() {
             </AnimatePresence>
           </div>
 
-          {/* Switch */}
           <div className="mt-8 pt-8 border-t border-zinc-200 dark:border-white/10 text-center">
             <p className="text-sm font-medium text-zinc-500">
               {isLogin ? "Hisobingiz yo‘qmi?" : "Hisobingiz bormi?"}
@@ -86,7 +79,6 @@ export default function AuthPage() {
 
         </div>
 
-        {/* Footer */}
         <p className="text-center text-zinc-500 text-xs mt-8">
           © {new Date().getFullYear()} DToDo Inc.
         </p>

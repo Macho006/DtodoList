@@ -47,7 +47,7 @@ export default function LoginForm() {
       transition={{ duration: 0.4 }}
       className="w-full max-w-md p-8 bg-zinc-900 border border-zinc-800 rounded-2xl shadow-2xl"
     >
-      <h2 className="text-3xl font-bold text-center text-white mb-2">Qaytganingizdan xursandmiz</h2>
+      <h2 className="text-3xl font-bold text-center text-white mb-2">Xush kelibsiz</h2>
       <p className="text-zinc-400 text-center mb-6">Davom ettirish uchun kiring</p>
       
       <form onSubmit={handleSubmit} className="space-y-4">
