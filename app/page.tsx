@@ -83,7 +83,7 @@ export default function AuthPage() {
         </motion.div>
 
         <p className="text-center text-zinc-600 text-xs mt-8">
-          &copy; {new Date().getFullYear()} GritApp Inc. Barcha huquqlar himoyalangan.
+          &copy; {new Date().getFullYear()} DToDo Inc. Barcha huquqlar himoyalangan.
         </p>
       </div>
     </div>

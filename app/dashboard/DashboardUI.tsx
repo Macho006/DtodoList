@@ -108,7 +108,7 @@ export default function DashboardUI({ userEmail, logoutAction }: DashboardUIProp
             <div className="w-10 h-10 bg-gradient-to-br from-violet-600 to-indigo-600 rounded-full flex items-center justify-center text-white shadow-md">
               <span className="font-bold">G</span>
             </div>
-            <span className="font-bold text-xl tracking-wide text-foreground">GritApp</span>
+            <span className="font-bold text-xl tracking-wide text-foreground">DToDo</span>
           </div>
           <div className="flex items-center gap-4">
             <div className="hidden md:flex items-center gap-2 text-sm font-medium text-zinc-600 dark:text-zinc-300 bg-zinc-100 dark:bg-white/5 px-4 py-2 rounded-full border border-zinc-200 dark:border-white/10">

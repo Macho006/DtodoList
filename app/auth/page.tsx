@@ -32,7 +32,7 @@ export default function AuthPage() {
             >
               G
             </motion.div>
-            <h1 className="text-3xl font-bold text-foreground tracking-tight">GritApp ID</h1>
+            <h1 className="text-3xl font-bold text-foreground tracking-tight">DToDo ID</h1>
             <p className="text-zinc-500 font-medium mt-2">
               Kelajak sport tizimiga xush kelibsiz.
             </p>
