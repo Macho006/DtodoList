@@ -30,7 +30,7 @@ export default function AuthPage() {
                whileHover={{ scale: 1.05, rotate: 5 }}
                className="w-20 h-20 mx-auto bg-gradient-to-tr from-violet-600 to-indigo-600 rounded-[24px] flex items-center justify-center text-white text-3xl font-bold shadow-xl shadow-violet-500/30 mb-6"
             >
-              G
+              DT
             </motion.div>
             <h1 className="text-3xl font-bold text-foreground tracking-tight">DToDo ID</h1>
             <p className="text-zinc-500 font-medium mt-2">
