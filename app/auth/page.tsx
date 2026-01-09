@@ -11,10 +11,6 @@ export default function AuthPage() {
 
   return (
     <main className="relative flex min-h-screen items-center justify-center overflow-hidden p-6">
-      
-      <div className="absolute top-6 right-6 z-50">
-        <ThemeToggle />
-      </div>
 
       <motion.div
         initial={{ opacity: 0, scale: 0.9, y: 30 }}
@@ -22,7 +18,6 @@ export default function AuthPage() {
         transition={{ duration: 0.6, type: "spring", stiffness: 90 }}
         className="w-full max-w-[440px]"
       >
-        {/* Shadow-2xl va backdrop-blur-3xl ideal kontrast beradi */}
         <div className="ios-card p-10 shadow-2xl backdrop-blur-3xl bg-white/60 dark:bg-black/40">
           
           <div className="text-center mb-10">
@@ -34,7 +29,7 @@ export default function AuthPage() {
             </motion.div>
             <h1 className="text-3xl font-bold text-foreground tracking-tight">DToDo ID</h1>
             <p className="text-zinc-500 font-medium mt-2">
-              Kelajak sport tizimiga xush kelibsiz.
+              Intizom va reja — muvaffaqiyat kaliti.
             </p>
           </div>
 
@@ -66,17 +61,21 @@ export default function AuthPage() {
 
           <div className="mt-8 pt-8 border-t border-zinc-200 dark:border-white/10 text-center">
              <p className="text-sm font-medium text-zinc-500">
-               {isLogin ? "Hisobingiz yo'qmi?" : "Hisobingiz bormi?"}
+               {isLogin ? "Hisobingiz yo‘qmi?" : "Hisobingiz bormi?"}
                <button 
                  onClick={() => setIsLogin(!isLogin)}
                  className="ml-2 font-bold text-violet-600 hover:text-violet-500 transition-colors"
                >
-                 {isLogin ? "Yaratish" : "Kirish"}
+                 {isLogin ? "Ro‘yxatdan o‘tish" : "Kirish"}
                </button>
              </p>
           </div>
 
         </div>
+
+        <p className="text-center text-zinc-500 text-xs mt-8">
+          © {new Date().getFullYear()} DToDo Inc.
+        </p>
       </motion.div>
     </main>
   );
